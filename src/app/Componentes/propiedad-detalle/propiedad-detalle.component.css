@@ -1,0 +1,80 @@
+.slider
+{
+    width: 85%;
+   /* -webkit-box-shadow: 6px 10px 15px 3px rgba(20,38,136,0.58); 
+    box-shadow: 6px 10px 15px 3px rgba(20,38,136,0.58);*/
+    margin: 0px auto;
+    margin-top: 30px;
+}
+
+.contenedor
+{
+    width: 100%;
+    min-height: 500px;
+  
+    
+}
+
+.informacion
+{
+    width: 84%;
+    min-width: 500px;
+    margin-left: 103px;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    background-color: #f4f3f3;
+}
+
+.direccion
+{
+    
+    text-align: right;
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #8e8efe;
+}
+
+.tituloParrafo{
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #8e8efe;
+}
+
+.parrafoPropiedad
+{
+    display: block;
+    margin-top: 5px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+}
+
+.precio
+{
+    color: #e7e7e7;
+    background-color: rgba(47, 55, 118, 0.9);
+    width: 120px;
+    display: block;
+    text-align: center;
+    height: 30px;
+    font-size: 20px;
+    line-height: 30px;
+    position: absolute;
+    margin-top: -5px;
+    margin-left: 127px;
+}
+
+.cajaOperacion
+{
+    background-color: darkorange;
+    display: block;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    position: absolute;
+    margin-top: -5px;
+}

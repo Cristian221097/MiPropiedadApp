@@ -1,0 +1,32 @@
+<div class="contenedor">
+    <div class="slider" >
+        <ng-image-slider [images]="imageObject" [imageSize]="{ width: '400px', height:'400px' }" #nav></ng-image-slider>
+    </div>
+
+    <div class="informacion" *ngIf="propiedad">
+       
+        <span class="cajaOperacion">{{propiedad.operacion}}</span>
+        <span class="precio">{{propiedad.precio}} $RD</span>   <p class="direccion">{{propiedad.ciudad}},  {{propiedad.sector}},  {{propiedad.direccion}}</p>
+        <hr>
+        
+
+        <span class="tituloParrafo">Habitaciones:</span><br>
+        <span class="parrafoPropiedad">{{propiedad.habitaciones}}</span><br>
+
+        <span class="tituloParrafo">Baños:</span><br>
+        <span class="parrafoPropiedad">{{propiedad.banos}}</span><br>
+       
+
+        <span class="tituloParrafo">Categoria:</span><br>
+        <span class="parrafoPropiedad">{{propiedad.categoria}}</span><br>
+         
+        
+        <span class="tituloParrafo">Pais:</span><br>
+        <span class="parrafoPropiedad">{{propiedad.pais}}</span><br>
+
+        <span class="tituloParrafo">Caracteristicas:</span> <br>
+        <span class="parrafoPropiedad">{{propiedad.caracteristica}}</span>
+        
+    </div>
+</div>
+

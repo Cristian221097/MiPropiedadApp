@@ -1,0 +1,56 @@
+ <header id="CabeceraPropiedad">
+     <nav id="MenuPropiedad">
+         <ul>
+             <li (click)="EnVenta()">Propiedad En venta</li>
+             <li (click)="EnAlquiler()">Propiedad En alquiler</li>
+             <li (click)="todasPropiedades()">Todas las Propiedades</li>
+         </ul>
+     </nav>
+     <div id="SeleccionBusqueda">
+         <div class="caja">
+            <input type="radio" [(ngModel)]="busqueda" value="precio" id="precio" name="SeleccionBusqueda"/>
+            <label for="precio">Precio</label>
+         </div>
+
+         <div class="caja">
+            <input type="radio" [(ngModel)]="busqueda" value="habitaciones" id="habitaciones" name="SeleccionBusqueda"/>
+            <label for="habitaciones">habitaciones</label>
+        </div>
+
+        <div class="caja">
+            <input type="radio" [(ngModel)]="busqueda" value="baños" id="baños" name="SeleccionBusqueda"/>
+            <label for="baños">baños</label>
+        </div>
+
+        <div class="caja">
+            <input type="radio" [(ngModel)]="busqueda" value="sector" id="sector" name="SeleccionBusqueda"/>
+            <label for="sector">sector</label>
+        </div>
+     </div>
+     <div id="cajaBuscador">
+        <input type="text" [(ngModel)]="filtro" placeholder="Buscar Propiedad" />
+        <input type="button" value="buscar" (click)="BuscarPropiedad()"/>
+     </div>
+ </header>
+
+
+<div id="contenedorPrincipal" >
+    
+    <div class="ContenedorPropiedad" *ngFor="let propiedad of propiedades">
+        <a [routerLink]="['/detalle',propiedad.idPropiedad]" >
+        <div class="contenedorInterno">
+            <div class="cajaImg">
+                <img class="foto" src="https://localhost:44335/Recursos/imagenes/{{propiedad.fotos}}" />
+            </div>
+    
+            <div class="Informacion">
+            <span class="parrafo1"> Sector:</span> <span class="parrafo2"> {{propiedad.sector}}</span> <br>
+            <span class="parrafo1"> Ciudad:</span> <span class="parrafo2">{{propiedad.ciudad}} </span>  <br>
+            <span class="precio">{{propiedad.precio}}$RD </span> <br>
+            <span class="cajaOperacion">{{propiedad.operacion}}</span> 
+            </div>
+        </div>
+        </a>
+    </div>
+   
+</div>

@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'miPropiedadApp';
+  Mostrar:boolean;
+
+  constructor(){
+    this.Mostrar = false;
+  }
+
+  mostrarMenu(){
+    if(this.Mostrar == false){
+      this.Mostrar = true;
+    }else{
+      this.Mostrar = false;
+    }
+    
+  }
 }
